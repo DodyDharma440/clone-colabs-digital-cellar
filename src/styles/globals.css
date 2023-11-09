@@ -2,26 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Regular */
+@font-face {
+  font-family: "Matter SQ";
+  src: url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.eot");
+  src: url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.svg#Matter SQ Regular")
+      format("svg");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Medium */
+@font-face {
+  font-family: "Matter SQ";
+  src: url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.eot");
+  src: url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.svg#Matter SQ Medium")
+      format("svg");
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Light */
+@font-face {
+  font-family: "Matter SQ";
+  src: url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.eot");
+  src: url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.svg#Matter SQ Light")
+      format("svg");
+}
+
+.rounded-primary {
+  @apply rounded-[20px] md:rounded-[30px];
+}
+
+.rounded-b-primary {
+  @apply rounded-b-[20px] md:rounded-b-[30px];
+}
+
+.rounded-t-primary {
+  @apply rounded-t-[20px] md:rounded-t-[30px];
+}
+
+.rounded-tl-primary {
+  @apply rounded-tl-[20px] md:rounded-tl-[30px];
+}
+
+.rounded-tr-primary {
+  @apply rounded-tr-[20px] md:rounded-tr-[30px];
 }
