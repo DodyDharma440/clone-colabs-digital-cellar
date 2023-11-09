@@ -1,5 +1,6 @@
-import Head from "next/head";
 import React from "react";
+import Head from "next/head";
+import { HeroSection } from "@/modules/home/components";
 
 const Home = () => {
   return (
@@ -7,7 +8,8 @@ const Home = () => {
       <Head>
         <title>Colabs - Making space for transformative innovation</title>
       </Head>
-      Making space for transformative innovation
+
+      <HeroSection />
     </>
   );
 };

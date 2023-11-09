@@ -10,7 +10,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
     <main>
       <Navbar />
       <div className="pb-5">
-        <div className="h-[2000px]">{children}</div>
+        {children}
         <Footer />
       </div>
     </main>

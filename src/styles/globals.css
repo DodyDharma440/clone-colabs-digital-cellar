@@ -69,3 +69,11 @@
 .rounded-tr-primary {
   @apply rounded-tr-[20px] md:rounded-tr-[30px];
 }
+
+.rounded-bl-primary {
+  @apply rounded-bl-[20px] md:rounded-bl-[30px];
+}
+
+.rounded-br-primary {
+  @apply rounded-br-[20px] md:rounded-br-[30px];
+}
