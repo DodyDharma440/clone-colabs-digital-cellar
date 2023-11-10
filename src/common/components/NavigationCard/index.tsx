@@ -15,6 +15,7 @@ type NavigationCardProps = {
     JSX.IntrinsicElements["a"] & Omit<LinkProps, "href" | "className">,
     "ref" | "children"
   >;
+  isSliderContent?: boolean;
 };
 
 const NavigationCard = extendElement<"div", NavigationCardProps>(
@@ -26,15 +27,20 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
     linkClassName,
     children,
     imageClassName,
+    isSliderContent,
     ...props
   }) => {
     const [isHover, setIsHover] = useState(false);
 
     const content = (
       <div
-        className={mergeCn("rounded-primary relative text-white", className, {
-          ["h-full"]: href,
-        })}
+        className={mergeCn(
+          "rounded-primary relative text-white text-[20px] md:text-[26px] font-medium leading-[1.1] tracking-tight",
+          className,
+          {
+            ["h-full"]: href,
+          }
+        )}
         {...props}
       >
         {imageUrl ? (
@@ -50,7 +56,13 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
           </div>
         ) : null}
 
-        <div className="px-5 py-4 w-full h-full z-[2] relative">{children}</div>
+        <div
+          className={mergeCn("p-5 w-full h-full z-[2] absolute inset-0", {
+            ["p-0"]: isSliderContent,
+          })}
+        >
+          {children}
+        </div>
 
         <div className="pl-[10px] pt-[10px] bg-body absolute bottom-0 right-0 rounded-tl-primary z-[3]">
           <CornerShape
@@ -69,9 +81,12 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
             onMouseLeave={() => setIsHover(false)}
           >
             <HiOutlineArrowRight
-              className={mergeCn("transform transition-all duration-300", {
-                ["scale-[1.4] -rotate-[25deg]"]: isHover,
-              })}
+              className={mergeCn(
+                "transform transition-all duration-300 text-base",
+                {
+                  ["scale-[1.4] -rotate-[25deg]"]: isHover,
+                }
+              )}
             />
           </button>
         </div>
@@ -84,7 +99,7 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
           href={href}
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
-          className={linkClassName}
+          className={mergeCn("grid", linkClassName)}
           {...linkProps}
         >
           {content}

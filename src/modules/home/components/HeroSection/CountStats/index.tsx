@@ -34,7 +34,7 @@ const CountStats = () => {
   const [swiperRef, setSwiperRef] = useState<SwiperClass | null>(null);
 
   return (
-    <div className="rounded-full bg-light-brown overflow-hidden relative">
+    <div className="rounded-primary md:rounded-full bg-light-brown overflow-hidden relative">
       <Swiper
         slidesPerView={1}
         className="h-[260px]"
@@ -77,7 +77,7 @@ const CountStats = () => {
         })}
       </Swiper>
 
-      <div className="flex absolute bottom-[30px] gap-3 z-10 inset-x-0 justify-center">
+      <div className="flex flex-col md:flex-row absolute right-[30px] top-0 bottom-0 md:right-0 md:top-[unset] md:bottom-[30px] gap-3 z-10 md:left-0 justify-center">
         {countsData.map((_, index) => {
           const isActive = activeSlide === index;
 

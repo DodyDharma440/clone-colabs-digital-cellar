@@ -100,7 +100,12 @@ const MobileNavbar = () => {
         </div>
         <CornerShape className="left-[10px] sm:left-5 lg:left-[40px] -bottom-[20px] z-20" />
 
-        <Transition nodeRef={menuRef} in={isOpen} timeout={duration}>
+        <Transition
+          nodeRef={menuRef}
+          in={isOpen}
+          timeout={duration}
+          unmountOnExit
+        >
           {(state) => (
             <div
               ref={menuRef}
