@@ -1,6 +1,6 @@
 import React from "react";
 import { HiOutlineArrowDown } from "react-icons/hi";
-import { Container, CornerShape } from "@/common/components";
+import { Container, CornerShape, NavigationCard } from "@/common/components";
 import CountStats from "./CountStats";
 
 const HeroSection = () => {
@@ -37,8 +37,19 @@ const HeroSection = () => {
               </button>
             </div>
           </div>
-          <div className="md:w-[260px] w-full">
+          <div className="md:w-[260px] w-full h-full gap-2 flex flex-col">
             <CountStats />
+            <div className="flex flex-col gap-2 flex-1">
+              <NavigationCard
+                href="#"
+                linkClassName="min-h-[140px] h-[40%]"
+                imageUrl="https://colabs.yourcreative.com.au/wp-content/uploads/2023/07/dragonfly-1.jpg"
+                imageClassName="transform scale-150"
+              >
+                <p className="text-[26px] font-bold">Join the Lab</p>
+              </NavigationCard>
+              <NavigationCard className="min-h-[160px] flex-1 bg-bright-green" />
+            </div>
           </div>
         </div>
       </Container>

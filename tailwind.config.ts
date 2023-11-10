@@ -10,6 +10,7 @@ const config: Config = {
         footer: "#2a2c2d",
         "green-yellow": "#d9db4d",
         "light-brown": "#dcb688",
+        "bright-green": "#32c58b",
       },
       fontFamily: {
         "matter-sq": "'Matter SQ', sans-serif",
