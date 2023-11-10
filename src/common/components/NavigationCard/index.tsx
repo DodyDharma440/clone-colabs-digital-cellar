@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 import { mergeCn } from "@/common/utils/classnames";
 import { extendElement } from "@/common/utils/element";
-import { HiOutlineArrowRight } from "react-icons/hi";
 import { ArrowButton, CornerShape } from "..";
+
+type ChildCn = Partial<Record<"link" | "image" | "circleImage", string>>;
 
 type NavigationCardProps = {
   imageUrl?: string;
-  imageClassName?: string;
   imageContainer?: "circle" | "fill";
   href?: string;
-  linkClassName?: string;
   linkProps?: Omit<
     JSX.IntrinsicElements["a"] & Omit<LinkProps, "href" | "className">,
     "ref" | "children"
   >;
   isSliderContent?: boolean;
+  classNames?: ((isHover: boolean) => ChildCn) | ChildCn;
 };
 
 const NavigationCard = extendElement<"div", NavigationCardProps>(
@@ -25,14 +25,19 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
     imageUrl,
     href,
     linkProps,
-    linkClassName,
     children,
-    imageClassName,
     isSliderContent,
     imageContainer = "fill",
+    classNames: _classNames,
     ...props
   }) => {
     const [isHover, setIsHover] = useState(false);
+    const classNames = useMemo(() => {
+      if (_classNames instanceof Function) {
+        return _classNames(isHover);
+      }
+      return _classNames;
+    }, [_classNames, isHover]);
 
     const content = (
       <div
@@ -48,13 +53,18 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
         {imageUrl ? (
           <>
             {imageContainer === "circle" ? (
-              <div className="mx-auto w-[90%] md:w-[60%] aspect-square bg-black relative h-full rounded-full overflow-hidden">
+              <div
+                className={mergeCn(
+                  "mx-auto aspect-square bg-black relative h-full rounded-full overflow-hidden",
+                  classNames?.circleImage
+                )}
+              >
                 <Image
                   src={imageUrl}
                   fill
                   alt="Background"
                   className={mergeCn(
-                    imageClassName,
+                    classNames?.image,
                     "object-cover transform transition-transform duration-300",
                     {
                       ["scale-110"]: isHover,
@@ -67,7 +77,7 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
                 src={imageUrl}
                 fill
                 alt="Background"
-                className={mergeCn(imageClassName, "object-cover")}
+                className={mergeCn(classNames?.image, "object-cover")}
               />
             )}
           </>
@@ -103,7 +113,7 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
           href={href}
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
-          className={mergeCn("grid", linkClassName)}
+          className={mergeCn("block", classNames?.link)}
           {...linkProps}
         >
           {content}

@@ -43,9 +43,11 @@ const HeroSection = () => {
             <div className="flex flex-col gap-2 flex-1 min-h-[400px] md:min-h-[0px]">
               <NavigationCard
                 href="#"
-                linkClassName="min-h-[170px] md:min-h-[140px] h-[46%] md:h-[40%]"
+                classNames={{
+                  link: "min-h-[170px] md:min-h-[140px] h-[46%] md:h-[40%]",
+                  image: "transform scale-150",
+                }}
                 imageUrl="https://colabs.yourcreative.com.au/wp-content/uploads/2023/07/dragonfly-1.jpg"
-                imageClassName="transform scale-150"
               >
                 <p>Join the Lab</p>
               </NavigationCard>

@@ -59,7 +59,9 @@ const ServiceSection = () => {
                           background,
                           "h-full hover:transform hover:-translate-y-[5px] transition-transform duration-300 relative px-[30px] py-[30px] md:py-5"
                         )}
-                        linkClassName="h-full"
+                        classNames={{
+                          circleImage: "w-[90%] md:w-[60%]",
+                        }}
                         href="#"
                         imageUrl={image}
                         imageContainer="circle"

@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { EmailSubscription } from "@/common/layouts";
 import {
+  CtaGridSection,
   HeroSection,
   PrincipleSection,
   ServiceSection,
@@ -17,6 +18,7 @@ const Home = () => {
       <HeroSection />
       <ServiceSection />
       <PrincipleSection />
+      <CtaGridSection />
 
       <EmailSubscription />
     </>

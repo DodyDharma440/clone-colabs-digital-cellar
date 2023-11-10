@@ -12,6 +12,7 @@ const config: Config = {
         "light-brown": "#dcb688",
         "bright-green": "#32c58b",
         "moss-green": "#66662a",
+        "saddle-brown": "#b1653a",
       },
       lineHeight: {
         primary: "1.1",
