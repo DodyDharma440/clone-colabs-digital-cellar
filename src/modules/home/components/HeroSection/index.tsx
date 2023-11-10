@@ -1,6 +1,7 @@
 import React from "react";
 import { HiOutlineArrowDown } from "react-icons/hi";
 import { Container, CornerShape } from "@/common/components";
+import CountStats from "./CountStats";
 
 const HeroSection = () => {
   return (
@@ -36,7 +37,9 @@ const HeroSection = () => {
               </button>
             </div>
           </div>
-          <div className="md:w-[320px] w-full"></div>
+          <div className="md:w-[260px] w-full">
+            <CountStats />
+          </div>
         </div>
       </Container>
     </section>

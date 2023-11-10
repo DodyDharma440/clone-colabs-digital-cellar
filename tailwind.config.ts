@@ -9,6 +9,7 @@ const config: Config = {
         "nav-hover": "#005241",
         footer: "#2a2c2d",
         "green-yellow": "#d9db4d",
+        "light-brown": "#dcb688",
       },
       fontFamily: {
         "matter-sq": "'Matter SQ', sans-serif",
