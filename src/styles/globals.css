@@ -137,3 +137,7 @@
 .rounded-br-primary {
   @apply rounded-br-[20px] md:rounded-br-[30px];
 }
+
+.section {
+  @apply mb-[80px] md:mb-[160px];
+}

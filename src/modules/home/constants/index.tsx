@@ -39,3 +39,30 @@ export const sliderData = [
     highlighted: "Ecoliteracy:",
   },
 ];
+
+export const servicesData = [
+  {
+    title: "Build a Lab",
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/05/2JF5R14-scaled.jpg",
+    background: "bg-[#66662a]",
+  },
+  {
+    title: "Innovation Facilitation",
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/05/M49EM8-scaled.jpg",
+    background: "bg-[#b1653a]",
+  },
+  {
+    title: "Office Space",
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/06/office-space-icon.jpg",
+    background: "bg-[#5757a5]",
+  },
+  {
+    title: "Lab Space",
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/05/WX8JWA-scaled.jpg",
+    background: "bg-[#0046c7]",
+  },
+];

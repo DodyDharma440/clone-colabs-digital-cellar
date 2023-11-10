@@ -9,6 +9,7 @@ import { ArrowButton, CornerShape } from "..";
 type NavigationCardProps = {
   imageUrl?: string;
   imageClassName?: string;
+  imageContainer?: "circle" | "fill";
   href?: string;
   linkClassName?: string;
   linkProps?: Omit<
@@ -28,6 +29,7 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
     children,
     imageClassName,
     isSliderContent,
+    imageContainer = "fill",
     ...props
   }) => {
     const [isHover, setIsHover] = useState(false);
@@ -35,7 +37,7 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
     const content = (
       <div
         className={mergeCn(
-          "rounded-primary relative text-white text-[20px] md:text-[26px] font-medium leading-[1.1] tracking-tight",
+          "rounded-t-primary rounded-bl-primary relative text-white text-[20px] md:text-[26px] font-medium overflow-hidden",
           className,
           {
             ["h-full"]: href,
@@ -44,14 +46,31 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
         {...props}
       >
         {imageUrl ? (
-          <div className="absolute inset-0 overflow-hidden rounded-primary z-[1]">
-            <Image
-              src={imageUrl}
-              fill
-              alt="Background"
-              className={mergeCn(imageClassName, "object-cover")}
-            />
-          </div>
+          <>
+            {imageContainer === "circle" ? (
+              <div className="mx-auto w-[90%] md:w-[60%] aspect-square bg-black relative h-full rounded-full overflow-hidden">
+                <Image
+                  src={imageUrl}
+                  fill
+                  alt="Background"
+                  className={mergeCn(
+                    imageClassName,
+                    "object-cover transform transition-transform duration-300",
+                    {
+                      ["scale-110"]: isHover,
+                    }
+                  )}
+                />
+              </div>
+            ) : (
+              <Image
+                src={imageUrl}
+                fill
+                alt="Background"
+                className={mergeCn(imageClassName, "object-cover")}
+              />
+            )}
+          </>
         ) : null}
 
         <div

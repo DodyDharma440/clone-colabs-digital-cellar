@@ -17,7 +17,7 @@ const EmailSubscription = () => {
           />
         </div>
         <div className="w-full md:w-[60%] bg-[#0046c7] rounded-primary p-[20px] md:p-[30px] text-body text-base md:text-[20px]">
-          <h1 className="text-[28px] md:text-[48px] font-semibold leading-[1.1] max-w-[600px] tracking-tight mb-5">
+          <h1 className="text-[28px] md:text-[48px] leading-primary font-semibold max-w-[600px] mb-5">
             An ecosystem to be part of. Stay in the loop.
           </h1>
 
@@ -37,7 +37,7 @@ const EmailSubscription = () => {
           </div>
 
           <div className="max-w-[500px] pt-20">
-            <p className="font-light leading-[1.1]">
+            <p className="font-light">
               Subscribe for updates, news, events, and community resources.
             </p>
           </div>

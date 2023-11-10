@@ -56,19 +56,15 @@ const CountStats = () => {
             <SwiperSlide key={index} style={{ width: "100%" }}>
               <div className="flex flex-col items-center justify-center w-full h-full">
                 <h2
-                  className={mergeCn(
-                    "font-semibold",
-                    {
-                      ["text-[80px]"]: !countData.smallerFont,
-                      ["text-[50px]"]: countData.smallerFont,
-                    },
-                    "leading-[1.1]"
-                  )}
+                  className={mergeCn("font-semibold", {
+                    ["text-[80px]"]: !countData.smallerFont,
+                    ["text-[50px]"]: countData.smallerFont,
+                  })}
                 >
                   <Counter value={countData.value} isActiveSlide={isActive} />
                   {countData.unit}
                 </h2>
-                <p className="text-xl text-center w-[70%] leading-6 font-light">
+                <p className="text-xl leading-primary text-center w-[70%] font-light">
                   {countData.label}
                 </p>
               </div>

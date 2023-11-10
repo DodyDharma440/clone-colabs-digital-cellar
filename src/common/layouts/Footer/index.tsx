@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 md:gap-[5%]">
             <div className="md:col-span-1 col-span-2">
               <div className="md:mr-[20%] mb-[50px]">
-                <p className="text-[20px] md:text-[26px] tracking-tighter leading-none md:leading-[29px]">
+                <p className="text-[20px] md:text-[26px] tracking-tighter">
                   Co-Labs Melbourne respectfully acknowledges the Traditional
                   Custodians of the land on which we operate our business – the
                   Boon Wurrung and Wurundjeri peoples of the Kulin Nation.
@@ -28,10 +28,7 @@ const Footer = () => {
                 <div className="grid grid-cols-2 gap-5">
                   {footerAddresses.map(({ address, phone }, index) => {
                     return (
-                      <div
-                        className="col-span-1 leading-[18px] tracking-wide"
-                        key={index}
-                      >
+                      <div className="col-span-1 tracking-wide" key={index}>
                         <div>{address}</div>
                         <a className="hover:underline" href={`tel:${phone}`}>
                           {phone}
@@ -53,7 +50,7 @@ const Footer = () => {
                             return (
                               <li key={index}>
                                 <Link
-                                  className="hover:underline hover:text-body text-[#aaabab] transition-all duration-800 leading-[18px]"
+                                  className="hover:underline hover:text-body text-[#aaabab] transition-all duration-800"
                                   href={path}
                                 >
                                   {label}

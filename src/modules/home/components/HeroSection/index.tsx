@@ -6,8 +6,8 @@ import HeroSlider from "./HeroSlider";
 
 const HeroSection = () => {
   return (
-    <section>
-      <Container className="h-auto md:h-[95vh] min-h-[630px] mt-[10px] mb-20">
+    <section className="section mt-[10px]">
+      <Container className="h-auto md:h-[95vh] min-h-[630px]">
         <div className="flex flex-col md:flex-row items-center gap-3 h-full">
           <div className="h-[500px] relative w-full md:h-full rounded-tr-primary rounded-tl-primary rounded-br-primary overflow-hidden">
             <video
@@ -29,7 +29,7 @@ const HeroSection = () => {
                 placement="bottom"
                 className="transform -rotate-90"
               />
-              <h1 className="text-[42px] leading-[44px] md:text-[60px] md:leading-[66px] tracking-tighter">
+              <h1 className="text-[42px] md:text-[60px] tracking-tighter">
                 Making space for transformative innovation
               </h1>
 

@@ -11,6 +11,10 @@ const config: Config = {
         "green-yellow": "#d9db4d",
         "light-brown": "#dcb688",
         "bright-green": "#32c58b",
+        "moss-green": "#66662a",
+      },
+      lineHeight: {
+        primary: "1.1",
       },
       fontFamily: {
         "matter-sq": "'Matter SQ', sans-serif",
