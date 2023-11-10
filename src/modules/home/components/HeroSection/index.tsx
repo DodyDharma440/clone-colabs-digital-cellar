@@ -44,7 +44,7 @@ const HeroSection = () => {
               <NavigationCard
                 href="#"
                 classNames={{
-                  link: "min-h-[170px] md:min-h-[140px] h-[46%] md:h-[40%]",
+                  link: "min-h-[170px] md:min-h-[140px] h-[46%] md:h-[40%] grid",
                   image: "transform scale-150",
                 }}
                 imageUrl="https://colabs.yourcreative.com.au/wp-content/uploads/2023/07/dragonfly-1.jpg"
