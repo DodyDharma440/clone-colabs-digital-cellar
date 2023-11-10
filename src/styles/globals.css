@@ -2,52 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Regular */
+/* BOLD */
 @font-face {
   font-family: "Matter SQ";
-  src: url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.eot");
-  src: url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.svg#Matter SQ Regular")
-      format("svg");
+  font-weight: 700;
+  src: url("/fonts/MatterSQTRIAL-Bold.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-Bold.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-Bold.otf") format("opentype");
 }
 
-/* Medium */
 @font-face {
   font-family: "Matter SQ";
-  src: url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.eot");
-  src: url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.svg#Matter SQ Medium")
-      format("svg");
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/MatterSQTRIAL-BoldItalic.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-BoldItalic.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-BoldItalic.otf") format("opentype");
 }
 
-/* Light */
+/* HEAVY */
 @font-face {
   font-family: "Matter SQ";
-  src: url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.eot");
-  src: url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/8d81920cb986a1e22756dd0b33eec543.svg#Matter SQ Light")
-      format("svg");
+  font-weight: 800;
+  src: url("/fonts/MatterSQTRIAL-Heavy.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-Heavy.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-style: italic;
+  font-weight: 800;
+  src: url("/fonts/MatterSQTRIAL-HeavyItalic.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-HeavyItalic.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-HeavyItalic.otf") format("opentype");
+}
+
+/* LIGHT */
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 300;
+  src: url("/fonts/MatterSQTRIAL-Light.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-Light.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-style: italic;
+  font-weight: 300;
+  src: url("/fonts/MatterSQTRIAL-LightItalic.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-LightItalic.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-LightItalic.otf") format("opentype");
+}
+
+/* MEDIUM */
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 500;
+  src: url("/fonts/MatterSQTRIAL-Medium.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-Medium.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-style: italic;
+  font-weight: 500;
+  src: url("/fonts/MatterSQTRIAL-MediumItalic.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-MediumItalic.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-MediumItalic.otf") format("opentype");
+}
+
+/* REGULAR */
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 400;
+  src: url("/fonts/MatterSQTRIAL-Regular.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-Regular.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/MatterSQTRIAL-RegularItalic.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-RegularItalic.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-RegularItalic.otf") format("opentype");
+}
+
+/* SEMIBOLD */
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 600;
+  src: url("/fonts/MatterSQTRIAL-SemiBold.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-SemiBold.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-style: italic;
+  font-weight: 600;
+  src: url("/fonts/MatterSQTRIAL-SemiBoldItalic.woff") format("woff"),
+    url("/fonts/MatterSQTRIAL-SemiBoldItalic.woff2") format("woff2"),
+    url("/fonts/MatterSQTRIAL-SemiBoldItalic.otf") format("opentype");
 }
 
 .rounded-primary {

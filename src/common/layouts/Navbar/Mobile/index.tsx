@@ -36,7 +36,7 @@ const MobileNavbar = () => {
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             className={mergeCn(
-              "border-[2px] border-solid  font-bold px-[10px] py-[4px] rounded-full text-[18px] transition-all duration-300",
+              "border-[2px] border-solid font-medium px-[10px] py-[4px] rounded-full text-[18px] transition-all duration-300",
               {
                 ["bg-green-yellow border-green-yellow"]: !isOpen,
                 ["bg-transparent border-black"]: isOpen,
@@ -110,7 +110,7 @@ const MobileNavbar = () => {
               }}
               className="rounded-tl-primary rounded-b-primary bg-green-yellow py-8 px-5 absolute top-full inset-x-[10px] sm:inset-x-5 lg:inset-x-[40px]"
             >
-              <p className="text-center font-bold">Welcome to Colabs</p>
+              <p className="text-center font-medium">Welcome to Colabs</p>
               <div className="mt-8">
                 <NavbarSearch fixedOpen />
               </div>
@@ -119,10 +119,8 @@ const MobileNavbar = () => {
                   ({ label, path }, index) => {
                     return (
                       <Link href={path} key={index}>
-                        <div className="py-3">
-                          <span className="text-[32px] font-semibold">
-                            {label}
-                          </span>
+                        <div className="py-[10px]">
+                          <span className="text-[32px]">{label}</span>
                         </div>
                         <hr className="border-t-zinc-600" />
                       </Link>

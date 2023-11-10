@@ -57,7 +57,7 @@ const CountStats = () => {
               <div className="flex flex-col items-center justify-center w-full h-full">
                 <h2
                   className={mergeCn(
-                    "font-bold",
+                    "font-semibold",
                     {
                       ["text-[80px]"]: !countData.smallerFont,
                       ["text-[50px]"]: countData.smallerFont,
@@ -68,7 +68,7 @@ const CountStats = () => {
                   <Counter value={countData.value} isActiveSlide={isActive} />
                   {countData.unit}
                 </h2>
-                <p className="text-xl text-center w-[65%] leading-6">
+                <p className="text-xl text-center w-[70%] leading-6 font-light">
                   {countData.label}
                 </p>
               </div>

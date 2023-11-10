@@ -28,7 +28,7 @@ const HeroSection = () => {
                 placement="bottom"
                 className="transform -rotate-90"
               />
-              <h1 className="text-[60px] leading-[66px] tracking-tighter font-medium">
+              <h1 className="text-[60px] leading-[66px] tracking-tighter">
                 Making space for transformative innovation
               </h1>
 
@@ -46,7 +46,7 @@ const HeroSection = () => {
                 imageUrl="https://colabs.yourcreative.com.au/wp-content/uploads/2023/07/dragonfly-1.jpg"
                 imageClassName="transform scale-150"
               >
-                <p className="text-[26px] font-bold">Join the Lab</p>
+                <p className="text-[26px] font-semibold">Join the Lab</p>
               </NavigationCard>
               <NavigationCard className="min-h-[160px] flex-1 bg-bright-green" />
             </div>

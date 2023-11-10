@@ -13,9 +13,7 @@ const DesktopNavbar = () => {
       <div className="h-[10px] bg-body w-full lg:block hidden" />
       <Container className="hidden lg:flex">
         <div className="pr-[30px] pb-[12px] pl-[15px] bg-body rounded-br-[30px] relative">
-          <p className="text-xs mb-[6px] font-semibold -translate-y-[1px]">
-            Naarm/Melbourne
-          </p>
+          <p className="text-xs mb-[6px] -translate-y-[1px]">Naarm/Melbourne</p>
           <LargeLogo className="h-[43px]" />
           <CornerShape placement="top" offsetIn="right" />
           <CornerShape placement="left" offsetIn="bottom" />
@@ -28,7 +26,7 @@ const DesktopNavbar = () => {
                   <li key={index}>
                     <Link
                       href={path}
-                      className="hover:text-nav-hover font-semibold"
+                      className="hover:text-nav-hover font-light"
                     >
                       {label}
                     </Link>
