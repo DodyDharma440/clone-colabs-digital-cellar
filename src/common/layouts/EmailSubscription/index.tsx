@@ -12,7 +12,6 @@ const EmailSubscription = () => {
           <Image
             alt="Subscription Thumb"
             src="https://colabs.yourcreative.com.au/wp-content/uploads/2023/07/subscribe.jpg"
-            loader={({ src }) => src}
             fill
             className="object-cover"
           />

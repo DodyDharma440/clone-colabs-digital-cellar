@@ -82,7 +82,10 @@ const HeroSlider = () => {
             <IndicatorButton
               isActive={activeSlide === index}
               key={index}
-              onClick={() => swiperRef?.slideTo(index)}
+              onClick={() => {
+                swiperRef?.autoplay.stop();
+                swiperRef?.slideTo(index);
+              }}
             />
           );
         })}

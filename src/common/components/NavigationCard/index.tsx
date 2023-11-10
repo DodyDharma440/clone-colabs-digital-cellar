@@ -48,10 +48,8 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
             <Image
               src={imageUrl}
               fill
-              objectFit="cover"
               alt="Background"
-              className={imageClassName}
-              loader={({ src }) => src}
+              className={mergeCn(imageClassName, "object-cover")}
             />
           </div>
         ) : null}
