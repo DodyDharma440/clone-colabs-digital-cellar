@@ -4,7 +4,7 @@ import Image from "next/image";
 import { mergeCn } from "@/common/utils/classnames";
 import { extendElement } from "@/common/utils/element";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import { CornerShape } from "..";
+import { ArrowButton, CornerShape } from "..";
 
 type NavigationCardProps = {
   imageUrl?: string;
@@ -75,20 +75,7 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
             placement="bottom"
             className="transform rotate-180 md:w-[20px] md:-left-[20px]"
           />
-          <button
-            className="rounded-full bg-black p-4 text-white"
-            onMouseEnter={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
-          >
-            <HiOutlineArrowRight
-              className={mergeCn(
-                "transform transition-all duration-300 text-base",
-                {
-                  ["scale-[1.4] -rotate-[25deg]"]: isHover,
-                }
-              )}
-            />
-          </button>
+          <ArrowButton isHovered={href ? isHover : undefined} />
         </div>
       </div>
     );

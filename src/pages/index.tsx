@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { EmailSubscription } from "@/common/layouts";
 import { HeroSection } from "@/modules/home/components";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       </Head>
 
       <HeroSection />
+      <EmailSubscription />
     </>
   );
 };
