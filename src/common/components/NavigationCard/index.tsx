@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 import { mergeCn } from "@/common/utils/classnames";
@@ -17,6 +17,7 @@ type NavigationCardProps = {
   >;
   isSliderContent?: boolean;
   classNames?: ((isHover: boolean) => ChildCn) | ChildCn;
+  isHover?: boolean;
 };
 
 const NavigationCard = extendElement<"div", NavigationCardProps>(
@@ -29,15 +30,22 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
     isSliderContent,
     imageContainer = "fill",
     classNames: _classNames,
+    isHover: defaultIsHover,
     ...props
   }) => {
-    const [isHover, setIsHover] = useState(false);
+    const [isHover, setIsHover] = useState(defaultIsHover || false);
     const classNames = useMemo(() => {
       if (_classNames instanceof Function) {
         return _classNames(isHover);
       }
       return _classNames;
     }, [_classNames, isHover]);
+
+    useEffect(() => {
+      if (typeof defaultIsHover !== "undefined") {
+        setIsHover(defaultIsHover);
+      }
+    }, [defaultIsHover]);
 
     const content = (
       <div
@@ -91,7 +99,11 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
           {children}
         </div>
 
-        <NavigationCardButton isHover={href ? isHover : undefined} />
+        <NavigationCardButton
+          isHover={
+            href || typeof defaultIsHover !== "undefined" ? isHover : undefined
+          }
+        />
       </div>
     );
 
@@ -99,8 +111,12 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
       return (
         <Link
           href={href}
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
+          onMouseEnter={() =>
+            typeof defaultIsHover === "undefined" ? setIsHover(true) : {}
+          }
+          onMouseLeave={() =>
+            typeof defaultIsHover === "undefined" ? setIsHover(false) : {}
+          }
           className={mergeCn("block", classNames?.link)}
           {...linkProps}
         >

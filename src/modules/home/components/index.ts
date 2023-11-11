@@ -3,3 +3,4 @@ export { default as ServiceSection } from "./ServiceSection";
 export { default as PrincipleSection } from "./PrincipleSection";
 export { default as CtaGridSection } from "./CtaGridSection";
 export { default as CommunitySlider } from "./CommunitySlider";
+export { default as CommunityCardsSection } from "./CommunityCardsSection";
