@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { useRouter } from "next/router";
 import { Transition, TransitionStatus } from "react-transition-group";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { mergeCn } from "@/common/utils/classnames";
@@ -24,6 +25,8 @@ const transitionStyles: Record<TransitionStatus, React.CSSProperties> = {
 };
 
 const MobileNavbar = () => {
+  const router = useRouter();
+
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const headMenuRef = useRef<HTMLDivElement>(null);
@@ -122,10 +125,18 @@ const MobileNavbar = () => {
               <div className="py-8">
                 {[{ label: "Home", path: "/" }, ...navMenus].map(
                   ({ label, path }, index) => {
+                    const isActive = router.pathname === path;
+
                     return (
                       <Link href={path} key={index}>
                         <div className="py-[10px]">
-                          <span className="text-[32px]">{label}</span>
+                          <span
+                            className={mergeCn("text-[32px]", {
+                              ["font-semibold text-nav-hover"]: isActive,
+                            })}
+                          >
+                            {label}
+                          </span>
                         </div>
                         <hr className="border-t-zinc-600" />
                       </Link>
