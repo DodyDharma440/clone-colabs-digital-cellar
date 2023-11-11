@@ -1,4 +1,4 @@
-import { Container, NavigationCard } from "@/common/components";
+import { Badge, Container, NavigationCard } from "@/common/components";
 import React, { useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
@@ -24,11 +24,7 @@ const ServiceSection = () => {
       <section className="section">
         <Container className="mb-[30px]">
           <div className="md:px-10">
-            <div className="rounded-full px-[10px] py-[5px] w-fit border border-gray-800">
-              <p className="font-light text-gray-800 text-[18px]">
-                Our Services
-              </p>
-            </div>
+            <Badge>Our Services</Badge>
           </div>
         </Container>
 
@@ -37,9 +33,9 @@ const ServiceSection = () => {
             <Swiper
               slidesPerView={1}
               className="!overflow-visible"
-              // autoplay={{
-              //   delay: 3000,
-              // }}
+              autoplay={{
+                delay: 3000,
+              }}
               breakpoints={{
                 576: { slidesPerView: 2 },
                 1280: { slidesPerView: 4 },

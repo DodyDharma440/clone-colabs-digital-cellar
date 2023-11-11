@@ -3,7 +3,7 @@ import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 import { mergeCn } from "@/common/utils/classnames";
 import { extendElement } from "@/common/utils/element";
-import { ArrowButton, CornerShape } from "..";
+import NavigationCardButton from "./Button";
 
 type ChildCn = Partial<Record<"link" | "image" | "circleImage", string>>;
 
@@ -91,19 +91,7 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
           {children}
         </div>
 
-        <div className="pl-[10px] pt-[10px] bg-body absolute bottom-0 right-0 rounded-tl-primary z-[3]">
-          <CornerShape
-            offsetIn="top"
-            placement="right"
-            className="transform rotate-180 md:w-[20px] md:-top-[20px]"
-          />
-          <CornerShape
-            offsetIn="left"
-            placement="bottom"
-            className="transform rotate-180 md:w-[20px] md:-left-[20px]"
-          />
-          <ArrowButton isHovered={href ? isHover : undefined} />
-        </div>
+        <NavigationCardButton isHover={href ? isHover : undefined} />
       </div>
     );
 

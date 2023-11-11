@@ -1,43 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import { extendElement } from "@/common/utils/element";
+import { ProgressSliderIndicator } from "@/common/components";
 import { sliderData } from "@/modules/home/constants";
-import { mergeCn } from "@/common/utils/classnames";
-
-type IndicatorButtonProps = {
-  isActive: boolean;
-};
-
-const IndicatorButton = extendElement<"button", IndicatorButtonProps>(
-  ({ isActive: defaultActive, ...props }) => {
-    const [isActive, setIsActive] = useState(false);
-
-    useEffect(() => {
-      setIsActive(defaultActive);
-    }, [defaultActive]);
-
-    return (
-      <button
-        className="bg-black bg-opacity-30 rounded-full h-[6px] w-full overflow-hidden"
-        {...props}
-      >
-        <div className={mergeCn("w-full h-full", { ["opacity-0"]: !isActive })}>
-          <div
-            className={mergeCn(
-              "bg-black bg-opacity-40 h-full transition-all duration-[6s]",
-              {
-                ["w-full"]: isActive,
-                ["w-0"]: !isActive,
-              }
-            )}
-          />
-        </div>
-      </button>
-    );
-  },
-  "IndicatorButton"
-);
 
 const HeroSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -79,7 +44,8 @@ const HeroSlider = () => {
       <div className="absolute left-0 right-0 bottom-5 w-[calc(100%-58px)] h-2 px-5 flex gap-[6px] z-[2]">
         {sliderData.map((_, index) => {
           return (
-            <IndicatorButton
+            <ProgressSliderIndicator
+              duration={6000}
               isActive={activeSlide === index}
               key={index}
               onClick={() => {

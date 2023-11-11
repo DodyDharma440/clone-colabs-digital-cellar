@@ -1,3 +1,5 @@
+import { IBlog } from "../interfaces";
+
 export const countsData = [
   { label: "Ideas Supported", value: 26, unit: "" },
   { label: "Impact Scholarships Awarded", value: 5, unit: "" },
@@ -64,5 +66,58 @@ export const servicesData = [
     image:
       "https://colabs.yourcreative.com.au/wp-content/uploads/2023/05/WX8JWA-scaled.jpg",
     background: "bg-[#0046c7]",
+  },
+];
+
+export const blogsData: IBlog[] = [
+  {
+    id: 1,
+    title:
+      "Rising to the biggest challenge of our time: Australia's duty of care to collectively re-imagine and re-design our nation",
+    description:
+      "A transdisciplinary, existentially hopeful response to Australia's draft National Science and Research Priorities",
+    tag: {
+      label: "Thoughts",
+      bg: "bg-green-yellow",
+    },
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/10/5.png",
+  },
+  {
+    id: 2,
+    title: "What are the 3 Horizons of Transformative Innovation?",
+    description:
+      "'Three Horizons thinking' is a useful method for making sense of and facilitating transformative innovation.",
+    tag: {
+      label: "Beyond the bench",
+      bg: "bg-bright-green",
+    },
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/07/3-horizons-tile.png",
+  },
+  {
+    id: 3,
+    title:
+      "Why We're Supporting the Development of a Cultivated Meat Industry In Australia",
+    description: "",
+    tag: {
+      label: "Thoughts",
+      bg: "bg-green-yellow",
+    },
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/07/Cultivated-Meat-tile.png",
+  },
+  {
+    id: 4,
+    title:
+      "Cortical Labs Raises $15M to Scale Up BiOS, an Organic- Digital Intelligence System",
+    description:
+      "What if Biology + Technology is the only way to make true AI?",
+    tag: {
+      label: "News",
+      bg: "bg-transparent",
+    },
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/07/CL-Brain-shrunk.png",
   },
 ];

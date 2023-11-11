@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { EmailSubscription } from "@/common/layouts";
 import {
+  CommunitySlider,
   CtaGridSection,
   HeroSection,
   PrincipleSection,
@@ -19,6 +20,7 @@ const Home = () => {
       <ServiceSection />
       <PrincipleSection />
       <CtaGridSection />
+      <CommunitySlider />
 
       <EmailSubscription />
     </>
