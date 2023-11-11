@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import { EmailSubscription } from "@/common/layouts";
+import { EmailSubscription, PageLayout } from "@/common/layouts";
 import { HeroSection, WhyUsSection } from "@/modules/services/components";
 
 const Services = () => {
   return (
-    <>
+    <PageLayout>
       <Head>
         <title>Colabs - Services</title>
       </Head>
@@ -14,7 +14,7 @@ const Services = () => {
       <WhyUsSection />
 
       <EmailSubscription />
-    </>
+    </PageLayout>
   );
 };
 

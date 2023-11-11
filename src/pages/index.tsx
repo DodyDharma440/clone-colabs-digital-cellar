@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { EmailSubscription } from "@/common/layouts";
+import { EmailSubscription, PageLayout } from "@/common/layouts";
 import {
   CommunityCardsSection,
   CommunitySlider,
@@ -12,7 +12,7 @@ import {
 
 const Home = () => {
   return (
-    <>
+    <PageLayout>
       <Head>
         <title>Colabs - Making space for transformative innovation</title>
       </Head>
@@ -25,7 +25,7 @@ const Home = () => {
       <CommunityCardsSection />
 
       <EmailSubscription />
-    </>
+    </PageLayout>
   );
 };
 
