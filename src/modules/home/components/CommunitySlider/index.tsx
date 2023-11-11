@@ -54,8 +54,8 @@ const CommunitySlider = () => {
                 slidesPerView={1}
                 loop
                 onSwiper={setTitleSlider}
-                onSlideNextTransitionStart={() => imageSlider?.slideNext()}
-                onSlidePrevTransitionStart={() => imageSlider?.slidePrev()}
+                onSlideNextTransitionStart={() => imageSlider?.slideNext(550)}
+                onSlidePrevTransitionStart={() => imageSlider?.slidePrev(550)}
                 onSlideChange={(swiper) => {
                   setActiveSlide(swiper.realIndex);
                 }}
