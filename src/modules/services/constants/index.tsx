@@ -1,3 +1,5 @@
+import { IServiceDetail } from "../interfaces";
+
 export const whyColabsData = [
   {
     title: "Access enabling infrastructure",
@@ -54,5 +56,48 @@ export const whyColabsData = [
       "Join a movement dedicated to creating systemic change and driving win-win-win solutions for individuals, communities, and ecosystems.",
     image:
       "https://colabs.yourcreative.com.au/wp-content/uploads/2023/05/Icon-SustainableFuture.svg",
+  },
+];
+
+export const serviceDetailsData: IServiceDetail[] = [
+  {
+    name: "Lab Space",
+    title:
+      "Access fully equiped wet and dry lab spaces, essential equipment and amenities",
+    subtitle: "Designed to foster innovation and collaboration",
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/05/WX8JWA-scaled.jpg",
+    textColor: "text-[#0046c7]",
+    bgColor: "bg-[#bed2f5]",
+  },
+  {
+    name: "Build a Lab",
+    title:
+      "Building and designing labs that are tailored and fit-for-purpose Australia wide.",
+    subtitle: "Take your project from zero to one.",
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/05/2JF5R14-scaled.jpg",
+    textColor: "text-[#b1653a]",
+    bgColor: "bg-[#dcb688]",
+  },
+  {
+    name: "Innovation Facilitation",
+    title: "Offering expertise across various stages of the startup lifecycle.",
+    subtitle:
+      "Refine your idea, access marketing support, and join a collaborative community.",
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/05/M49EM8-scaled.jpg",
+    textColor: "text-[#66662a]",
+    bgColor: "bg-[#d9db4d]",
+  },
+  {
+    name: "Office Space",
+    title: "Impact-oriented co-working spaces.",
+    subtitle:
+      "Work towards a future where social and environmental flourishing can co-exist.",
+    image:
+      "https://colabs.yourcreative.com.au/wp-content/uploads/2023/06/office-space-icon.jpg",
+    textColor: "text-[#5757a5]",
+    bgColor: "bg-[#bfb9e3]",
   },
 ];

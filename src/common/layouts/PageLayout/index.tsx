@@ -10,12 +10,12 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   return (
     <main>
       <Navbar />
-      <SmoothScroll>
-        <div className="pb-5">
-          {children}
-          <Footer />
-        </div>
-      </SmoothScroll>
+      {/* <SmoothScroll> */}
+      <div className="pb-5">
+        {children}
+        <Footer />
+      </div>
+      {/* </SmoothScroll> */}
     </main>
   );
 };
