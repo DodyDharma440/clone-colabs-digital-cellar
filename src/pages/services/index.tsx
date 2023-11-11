@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { EmailSubscription } from "@/common/layouts";
-import { HeroSection } from "@/modules/services/components";
+import { HeroSection, WhyUsSection } from "@/modules/services/components";
 
 const Services = () => {
   return (
@@ -11,6 +11,8 @@ const Services = () => {
       </Head>
 
       <HeroSection />
+      <WhyUsSection />
+
       <EmailSubscription />
     </>
   );

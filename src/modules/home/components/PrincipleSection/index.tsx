@@ -29,13 +29,13 @@ const PrincipleSection = () => {
                 <li
                   key={index}
                   className={mergeCn(
-                    "text-[24px] tracking-tighter md:text-[36px] whitespace-nowrap font-medium bg-moss-green w-fit rounded-[20px] pt-[10px] px-[20px] pb-[15px]",
+                    "whitespace-nowrap font-medium bg-moss-green w-fit rounded-[20px] pt-[10px] px-[20px] pb-[15px]",
                     {
                       ["-mb-[15px]"]: index !== 3,
                     }
                   )}
                 >
-                  {words}
+                  <h4>{words}</h4>
                 </li>
               );
             })}
@@ -43,7 +43,7 @@ const PrincipleSection = () => {
 
           <Link href="#" className="relative z-[2]">
             <div className="flex items-center gap-[10px]">
-              <div className="rounded-full bg-moss-green py-[5px] px-[15px] text-base md:text-[20px] font-light">
+              <div className="rounded-full bg-moss-green py-[5px] px-[15px] font-light">
                 Our Principles
               </div>
               <button className="rounded-full bg-moss-green p-[14px]">

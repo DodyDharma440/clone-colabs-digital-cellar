@@ -1,7 +1,6 @@
 import React from "react";
 import { Badge, Container } from "@/common/components";
 import { blogsData } from "../../constants";
-import Link from "next/link";
 import BlogCard from "../BlogCard";
 
 const CommunityCardsSection = () => {
@@ -9,7 +8,7 @@ const CommunityCardsSection = () => {
     <section className="section">
       <Container>
         <div className="md:px-10">
-          <h2 className="max-w-[860px] tracking-tighter text-[34px] md:text-[54px] my-10 md:my-20">
+          <h2 className="max-w-[860px] my-10 md:my-20">
             Space for big thinking, problem-solvers and bio-innovators
           </h2>
 

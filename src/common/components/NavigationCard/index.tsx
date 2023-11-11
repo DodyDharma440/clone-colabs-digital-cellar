@@ -50,7 +50,7 @@ const NavigationCard = extendElement<"div", NavigationCardProps>(
     const content = (
       <div
         className={mergeCn(
-          "rounded-t-primary rounded-bl-primary relative text-white text-[20px] md:text-[26px] font-medium overflow-hidden",
+          "rounded-t-primary rounded-bl-primary relative text-white font-medium overflow-hidden",
           className,
           {
             ["h-full"]: href,

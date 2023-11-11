@@ -13,7 +13,7 @@ const ServiceSection = () => {
       <section className="my-10 md:my-20">
         <Container>
           <div className="md:px-10">
-            <h2 className="max-w-[860px] tracking-tighter text-[34px] md:text-[54px]">
+            <h2 className="max-w-[860px]">
               We design, build and run collaborative spaces where bio-led
               science, technology and people can thrive
             </h2>
@@ -64,8 +64,8 @@ const ServiceSection = () => {
                         isSliderContent
                       >
                         <div className="px-[30px] py-5 flex flex-col h-full justify-between">
-                          <p className="text-[24px] md:text-[34px]">{title}</p>
-                          <p className="mr-[46px] -mb-[5px] text-right text-base md:text-[20px] font-light">
+                          <h4>{title}</h4>
+                          <p className="mr-[46px] -mb-[5px] text-right font-light">
                             Learn More
                           </p>
                         </div>

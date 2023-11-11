@@ -73,10 +73,8 @@ const CommunitySlider = () => {
                         )}
                       >
                         <Badge className="mb-[20px]">{blog.tag.label}</Badge>
-                        <h1 className="text-[24px] lg:text-[36px] font-medium tracking-tighter">
-                          {blog.title}
-                        </h1>
-                        <div className="text-base mt-[20px] max-w-[450px] lg:text-[20px] font-light tracking-normal">
+                        <h4 className="font-medium">{blog.title}</h4>
+                        <div className="mt-[20px] max-w-[450px] font-light tracking-normal">
                           {blog.description}
                         </div>
                       </div>
@@ -113,7 +111,7 @@ const CommunitySlider = () => {
                   onMouseLeave={() => setIsHover(false)}
                 >
                   <div className="flex">
-                    <div className="text-base md:text-[20px] mr-[60px] pb-[15px] font-light">
+                    <div className="mr-[60px] pb-[15px] font-light">
                       Read More
                     </div>
                     <NavigationCardButton isHover={isHover} />

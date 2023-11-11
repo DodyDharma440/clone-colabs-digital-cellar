@@ -8,6 +8,7 @@ const HeroSection = () => {
         <HeroVideo
           fileName="lab-vortex"
           title="Co-Labs gives people a place to experiment and create"
+          extraTitleSpace
         />
       </Container>
     </section>

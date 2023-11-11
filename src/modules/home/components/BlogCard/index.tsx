@@ -43,10 +43,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
             </Badge>
           </NavigationCard>
 
-          <h1 className="text-[24px] lg:text-[36px] font-medium tracking-tighter md:max-w-[75%]">
-            {blog.title}
-          </h1>
-          <div className="text-base mt-[15px] lg:mt-[20px] max-w-[450px] lg:text-[20px] font-light tracking-normal md:max-w-[75%]">
+          <h4 className="font-medium md:max-w-[75%]">{blog.title}</h4>
+          <div className="mt-[15px] lg:mt-[20px] max-w-[450px] font-light tracking-normal md:max-w-[75%]">
             {blog.description}
           </div>
         </div>

@@ -16,10 +16,10 @@ const EmailSubscription = () => {
             className="object-cover"
           />
         </div>
-        <div className="w-full md:w-[60%] bg-[#0046c7] rounded-primary p-[20px] md:p-[30px] text-body text-base md:text-[20px]">
-          <h1 className="text-[28px] md:text-[48px] leading-primary font-semibold max-w-[600px] mb-5">
+        <div className="w-full md:w-[60%] bg-[#0046c7] rounded-primary p-[20px] md:p-[30px] text-body">
+          <h3 className="font-medium max-w-[600px] mb-5">
             An ecosystem to be part of. Stay in the loop.
-          </h1>
+          </h3>
 
           <div className="py-[25px]">
             <input

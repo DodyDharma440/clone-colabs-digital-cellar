@@ -16,14 +16,14 @@ const Footer = () => {
           <div className="grid grid-cols-2 md:gap-[5%]">
             <div className="md:col-span-1 col-span-2">
               <div className="md:mr-[20%] mb-[50px]">
-                <p className="text-[20px] md:text-[26px] tracking-tighter">
+                <h5 className="font-light">
                   Co-Labs Melbourne respectfully acknowledges the Traditional
                   Custodians of the land on which we operate our business – the
                   Boon Wurrung and Wurundjeri peoples of the Kulin Nation.
-                </p>
+                </h5>
               </div>
             </div>
-            <div className="md:col-span-1 col-span-2">
+            <div className="md:col-span-1 col-span-2 font-light">
               <div className="max-w-[400px]">
                 <div className="grid grid-cols-2 gap-5">
                   {footerAddresses.map(({ address, phone }, index) => {
@@ -50,7 +50,7 @@ const Footer = () => {
                             return (
                               <li key={index}>
                                 <Link
-                                  className="hover:underline hover:text-body text-[#aaabab] transition-all duration-800"
+                                  className="hover:underline hover:text-body text-[#aaabab] transition-all duration-800 leading-normal"
                                   href={path}
                                 >
                                   {label}

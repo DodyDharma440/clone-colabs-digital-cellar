@@ -9,9 +9,9 @@ const TextContent = extendElement(({ children, className, ...props }) => {
       className={mergeCn("p-[24px] flex flex-col h-full justify-between")}
       {...props}
     >
-      <p className="text-[24px] md:text-[34px] max-w-[500px] font-medium pr-[25px]">
+      <h4 className="max-w-[500px] font-medium pr-[25px] tracking-normal">
         {children}
-      </p>
+      </h4>
     </div>
   );
 }, "TextContent");

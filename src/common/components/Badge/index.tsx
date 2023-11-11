@@ -14,7 +14,7 @@ const Badge = extendElement<"div", BadgeProps>(
     return (
       <div
         className={mergeCn(
-          "rounded-full px-[10px] py-[5px] border font-light w-fit",
+          "rounded-full px-[10px] py-[3px] border font-light w-fit text-base",
           className,
           {
             ["border-gray-800 text-gray-800 bg-transparent"]:

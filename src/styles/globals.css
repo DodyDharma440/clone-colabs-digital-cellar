@@ -138,6 +138,57 @@
   @apply rounded-br-[20px] md:rounded-br-[30px];
 }
 
+section {
+  font-size: clamp(1rem, 0.886rem + 0.36vw, 1.25rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+.h1,
+h1 {
+  font-size: clamp(2.625rem, 2.114rem + 1.64vw, 3.75rem);
+}
+
+.h1.large,
+h1.large {
+  font-size: clamp(4.375rem, 4.091rem + 0.91vw, 5rem);
+  font-weight: 600;
+}
+
+.h1.xlarge,
+h1.xlarge {
+  font-size: clamp(5rem, 3.722rem + 4.09vw, 7.813rem);
+}
+
+h2 {
+  font-size: clamp(2.125rem, 1.557rem + 1.82vw, 3.375rem);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 1.182rem + 1.82vw, 3rem);
+}
+
+h4 {
+  font-size: clamp(1.5rem, 1.159rem + 1.09vw, 2.25rem);
+}
+
+h5 {
+  font-size: clamp(1.313rem, 1.17rem + 0.45vw, 1.625rem);
+}
 .section {
   @apply mb-[80px] md:mb-[160px];
 }
