@@ -53,14 +53,18 @@ const ServiceDetails = () => {
   return (
     <section className="section">
       <Container className="relative">
-        <div className="flex items-center justify-center gap-5 mx-auto sticky top-[120px] z-[2] mb-4">
+        <div className="flex items-center justify-center gap-[5px] lg:gap-5 mx-auto sticky top-[120px] z-[2] mb-4">
           {services.map((service, index) => {
             return (
               <button
                 className={mergeCn(
-                  "py-[15px] px-[20px] rounded-full border",
-                  service.bgColor.replace("bg", "border")
+                  "md:py-[15px] md:px-[20px] px-[15px] py-[10px] rounded-full border text-xs md:text-[20px]"
                 )}
+                style={{
+                  borderColor: service.bgColor
+                    .replace("bg-[", "")
+                    .replace("]", ""),
+                }}
                 key={index}
               >
                 {service.name}
@@ -73,7 +77,7 @@ const ServiceDetails = () => {
           className="relative z-[1] flex flex-col gap-[500px]"
         >
           {services.map((service, index) => {
-            return <ServiceCard service={service} key={index} index={index} />;
+            return <ServiceCard service={service} key={index} />;
           })}
         </div>
       </Container>

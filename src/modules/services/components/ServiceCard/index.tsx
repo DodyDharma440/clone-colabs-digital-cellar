@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowButton } from "@/common/components";
 import { mergeCn } from "@/common/utils/classnames";
@@ -6,11 +6,9 @@ import { IServiceDetail } from "../../interfaces";
 
 type ServiceCardProps = {
   service: IServiceDetail;
-  index: number;
-  isHidden?: boolean;
 };
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const [isHover, setIsHover] = useState(false);
 
   return (

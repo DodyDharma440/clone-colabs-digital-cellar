@@ -32,7 +32,7 @@ const ServiceSection = () => {
           <div className="md:pl-10 pr-[60px] md:pr-[100px]">
             <Swiper
               slidesPerView={1}
-              className="!overflow-visible"
+              className="!overflow-visible !px-[1px]"
               autoplay={{
                 delay: 3000,
               }}
@@ -43,6 +43,7 @@ const ServiceSection = () => {
               modules={[Autoplay]}
               loop
               spaceBetween={10}
+              loopAdditionalSlides={4}
               onSwiper={setSwiperRef}
               initialSlide={1}
             >

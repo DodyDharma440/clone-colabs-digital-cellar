@@ -41,7 +41,11 @@ const CountStats = () => {
         autoplay={{
           delay: 6000,
         }}
-        allowTouchMove={false}
+        breakpoints={{
+          576: {
+            allowTouchMove: false,
+          },
+        }}
         modules={[Autoplay]}
         loop
         onSwiper={setSwiperRef}
