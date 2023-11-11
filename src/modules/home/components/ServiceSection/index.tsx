@@ -21,7 +21,7 @@ const ServiceSection = () => {
         </Container>
       </section>
 
-      <section className="section">
+      <section className="section overflow-hidden">
         <Container className="mb-[30px]">
           <div className="md:px-10">
             <Badge>Our Services</Badge>
